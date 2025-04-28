@@ -1,10 +1,12 @@
-﻿
+﻿using System;
+
+namespace OOPFinalsProject.Models
 {
     public class Book
     {
+        public int BookId { get; set; }  // Primary Key
         public string Title { get; set; }
-
-        [Required]
         public string Author { get; set; }
+        public DateTime PublishedDate { get; set; }
     }
 }
