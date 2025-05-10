@@ -1,8 +1,45 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<h1 class="text-center mb-4 fw-bold text-dark">Group 5 Finals Project</h1>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="card p-4 shadow-sm">
+    <div class="row text-center">
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-sm">
+                <img src="~/images/maica.jpg" class="card-img-top img-fluid" style="width: 100%; aspect-ratio: 1/1; object-fit: cover;" alt="Maica Merylle Francisco">
+                <div class="card-body">
+                    <h6 class="card-title">Leader: <br />Maica Merylle Francisco</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-sm">
+                <img src="~/images/donn.jpg" class="card-img-top img-fluid" style="width: 100%; aspect-ratio: 1/1; object-fit: cover;" alt="Donn Granz Brasileno">
+                <div class="card-body">
+                    <h6 class="card-title">Member: <br />Brasileno, Donn Granz</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-sm">
+                <img src="~/images/jorlyn.jpg" class="card-img-top img-fluid" style="width: 100%; aspect-ratio: 1/1; object-fit: cover;" alt="Jorlyn Shane Claveria">
+                <div class="card-body">
+                    <h6 class="card-title">Member: <br />Claveria, Jorlyn Shane</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-sm">
+                <img src="~/images/clyde.jpg" class="card-img-top img-fluid" style="width: 100%; aspect-ratio: 1/1; object-fit: cover;" alt="Clyde Dextler Fadrillan">
+                <div class="card-body">
+                    <h6 class="card-title">Member: <br />Fadrillan, Clyde Dextler</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-4">
+    <a href="@Url.Action("Create", "Persons")" class="btn btn-success">Create Person</a>
 </div>
