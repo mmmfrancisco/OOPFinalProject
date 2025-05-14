@@ -36,5 +36,35 @@ namespace Finals_Project_Group5.Controllers
             }
             return View(person);
         }
+
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var person = await _context.Persons.FindAsync(id);
+            if (person == null)
+            {
+                return NotFound();
+            }
+
+            return View(person);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var person = await _context.Persons.FindAsync(id);
+            if (person != null)
+            {
+                _context.Persons.Remove(person);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
