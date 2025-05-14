@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Finals_Project_Group5.Models.Person>  // Ensure this is correct
+
+<h1 class="mb-4">Person List</h1>
+
+<div class="card p-4 shadow-sm">
+    <table class="table table-striped table-hover">
+        <thead class="table-primary">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Id</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var person in Model)
+            {
+                <tr>
+                    <td>@person.Name</td>
+                    <td>@person.Age</td>
+                    <td>@person.Id</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+        <a href="@Url.Action("Create")" class="btn btn-success">Back to Create</a>
+    </div>
+</div>
