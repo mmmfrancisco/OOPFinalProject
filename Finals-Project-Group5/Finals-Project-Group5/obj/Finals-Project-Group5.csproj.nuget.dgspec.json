@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thund\\OneDrive\\Desktop\\cprog\\Finals-Project-Group5\\Finals-Project-Group5\\Finals-Project-Group5.csproj": {}
+    "C:\\Users\\thund\\source\\repos\\mmmfrancisco\\OOPFinalProject\\Finals-Project-Group5\\Finals-Project-Group5\\Finals-Project-Group5.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thund\\OneDrive\\Desktop\\cprog\\Finals-Project-Group5\\Finals-Project-Group5\\Finals-Project-Group5.csproj": {
+    "C:\\Users\\thund\\source\\repos\\mmmfrancisco\\OOPFinalProject\\Finals-Project-Group5\\Finals-Project-Group5\\Finals-Project-Group5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thund\\OneDrive\\Desktop\\cprog\\Finals-Project-Group5\\Finals-Project-Group5\\Finals-Project-Group5.csproj",
+        "projectUniqueName": "C:\\Users\\thund\\source\\repos\\mmmfrancisco\\OOPFinalProject\\Finals-Project-Group5\\Finals-Project-Group5\\Finals-Project-Group5.csproj",
         "projectName": "Finals-Project-Group5",
-        "projectPath": "C:\\Users\\thund\\OneDrive\\Desktop\\cprog\\Finals-Project-Group5\\Finals-Project-Group5\\Finals-Project-Group5.csproj",
+        "projectPath": "C:\\Users\\thund\\source\\repos\\mmmfrancisco\\OOPFinalProject\\Finals-Project-Group5\\Finals-Project-Group5\\Finals-Project-Group5.csproj",
         "packagesPath": "C:\\Users\\thund\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thund\\OneDrive\\Desktop\\cprog\\Finals-Project-Group5\\Finals-Project-Group5\\obj\\",
+        "outputPath": "C:\\Users\\thund\\source\\repos\\mmmfrancisco\\OOPFinalProject\\Finals-Project-Group5\\Finals-Project-Group5\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -67,9 +67,21 @@
               "target": "Package",
               "version": "[8.0.15, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[8.0.15, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.3, )"
             }
           },
           "imports": [

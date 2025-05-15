@@ -1,28 +1,43 @@
 ﻿@model Finals_Project_Group5.Models.Person
+@{
+    ViewData["Title"] = "Create Person";
+    Layout = "_Layout";
+}
 
-<h1 class="mb-4">Create Person</h1>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow-lg rounded-4 border-0">
+                <div class="card-header bg-gradient-primary text-black text-center rounded-top-4">
+                    <h1 class="fw-bold mb-0 fs-1">@ViewData["Title"]</h1>
+                </div>
+                <div class="card-body p-5">
+                    <form asp-action="Create" method="post" novalidate>
+                        <div class="mb-4">
+                            <label asp-for="Name" class="form-label fs-5 fw-semibold"></label>
+                            <input asp-for="Name" class="form-control form-control-lg shadow-sm" placeholder="Enter name" />
+                            <span asp-validation-for="Name" class="text-danger fs-6"></span>
+                        </div>
 
-<div class="card p-4 shadow-sm">
-    <form asp-action="Create">
-        <div class="form-group mb-3">
-            <label asp-for="Name" class="form-label"></label>
-            <input asp-for="Name" class="form-control" placeholder="Enter name" />
-            <span asp-validation-for="Name" class="text-danger"></span>
-        </div>
+                        <div class="mb-4">
+                            <label asp-for="Age" class="form-label fs-5 fw-semibold"></label>
+                            <input asp-for="Age" class="form-control form-control-lg shadow-sm" placeholder="Enter age" />
+                            <span asp-validation-for="Age" class="text-danger fs-6"></span>
+                        </div>
 
-        <div class="form-group mb-3">
-            <label asp-for="Age" class="form-label"></label>
-            <input asp-for="Age" class="form-control" placeholder="Enter age" />
-            <span asp-validation-for="Age" class="text-danger"></span>
+                        <div class="mb-5">
+                            <label asp-for="Id" class="form-label fs-5 fw-semibold"></label>
+                            <input asp-for="Id" class="form-control form-control-lg shadow-sm" placeholder="Enter id" />
+                            <span asp-validation-for="Id" class="text-danger fs-6"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-primary btn-lg px-5 fs-5 shadow">Create</button>
+                            <a asp-action="Index" class="btn btn-outline-secondary btn-lg px-5 fs-5 shadow">View List</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="form-group mb-3">
-            <label asp-for="Id" class="form-label"></label>
-            <input asp-for="Id" class="form-control" placeholder="Enter id" />
-            <span asp-validation-for="Id" class="text-danger"></span>
-        </div>
-        <button type="submit" class="btn btn-primary">Create</button>
-        <a href="@Url.Action("Index")" class="btn btn-success">View List</a>
-    </form>
+    </div>
 </div>
-<br />
-

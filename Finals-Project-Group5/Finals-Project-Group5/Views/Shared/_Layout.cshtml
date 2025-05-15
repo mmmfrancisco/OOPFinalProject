@@ -36,12 +36,18 @@
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - Person App, Group 5</a>
-        </div>
+    <footer class="footer fixed-bottom text-start bg-light text-muted border-top">
+    <div class="container">
+        &copy; 2025 - Person App, Group 5
+    </div>
     </footer>
+
+    <style>
+        .fixed-bottom { position: fixed; bottom: 0; left: 0; width: 100%; }
+        .text-start { text-align: left; }
+        .footer { padding: 0.5rem; }
+    </style>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

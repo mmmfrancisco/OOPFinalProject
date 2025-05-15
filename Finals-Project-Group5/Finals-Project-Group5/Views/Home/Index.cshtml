@@ -1,45 +1,64 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<h1 class="text-center mb-4 fw-bold text-dark">Group 5 Finals Project</h1>
 
-<div class="card p-4 shadow-sm">
-    <div class="row text-center">
-        <div class="col-md-3 mb-4">
-            <div class="card shadow-sm">
-                <img src="~/images/maica.jpg" class="card-img-top img-fluid" style="width: 100%; aspect-ratio: 1/1; object-fit: cover;" alt="Maica Merylle Francisco">
-                <div class="card-body">
-                    <h6 class="card-title">Leader: <br />Maica Merylle Francisco</h6>
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-dark">Group 5 Finals Project</h1>
+        <p class="text-muted fs-5">Meet the Team Members</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-10 col-md-5 col-lg-3 mb-4 d-flex align-items-stretch">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden w-100">
+                <div class="position-relative">
+                    <img src="~/images/maica.jpg" class="card-img-top" style="height: 300px; object-fit: cover;" alt="Maica Merylle Francisco">
+                    <div class="position-absolute bottom-0 start-0 bg-dark bg-opacity-50 text-white p-2 w-100 text-center">
+                        <h5 class="fw-bold mb-0">Leader</h5>
+                        <small>Maica Merylle Francisco</small>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-4">
-            <div class="card shadow-sm">
-                <img src="~/images/donn.jpg" class="card-img-top img-fluid" style="width: 100%; aspect-ratio: 1/1; object-fit: cover;" alt="Donn Granz Brasileno">
-                <div class="card-body">
-                    <h6 class="card-title">Member: <br />Brasileno, Donn Granz</h6>
+
+        <div class="col-10 col-md-5 col-lg-3 mb-4 d-flex align-items-stretch">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden w-100">
+                <div class="position-relative">
+                    <img src="~/images/donn.jpg" class="card-img-top" style="height: 300px; object-fit: cover;" alt="Donn Granz Brasileno">
+                    <div class="position-absolute bottom-0 start-0 bg-dark bg-opacity-50 text-white p-2 w-100 text-center">
+                        <h5 class="fw-bold mb-0">Member</h5>
+                        <small>Donn Granz Brasileno</small>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-4">
-            <div class="card shadow-sm">
-                <img src="~/images/jorlyn.jpg" class="card-img-top img-fluid" style="width: 100%; aspect-ratio: 1/1; object-fit: cover;" alt="Jorlyn Shane Claveria">
-                <div class="card-body">
-                    <h6 class="card-title">Member: <br />Claveria, Jorlyn Shane</h6>
+
+        <div class="col-10 col-md-5 col-lg-3 mb-4 d-flex align-items-stretch">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden w-100">
+                <div class="position-relative">
+                    <img src="~/images/jorlyn.jpg" class="card-img-top" style="height: 300px; object-fit: cover;" alt="Jorlyn Shane Claveria">
+                    <div class="position-absolute bottom-0 start-0 bg-dark bg-opacity-50 text-white p-2 w-100 text-center">
+                        <h5 class="fw-bold mb-0">Member</h5>
+                        <small>Jorlyn Shane Claveria</small>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-4">
-            <div class="card shadow-sm">
-                <img src="~/images/clyde.jpg" class="card-img-top img-fluid" style="width: 100%; aspect-ratio: 1/1; object-fit: cover;" alt="Clyde Dextler Fadrillan">
-                <div class="card-body">
-                    <h6 class="card-title">Member: <br />Fadrillan, Clyde Dextler</h6>
+
+        <div class="col-10 col-md-5 col-lg-3 mb-4 d-flex align-items-stretch">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden w-100">
+                <div class="position-relative">
+                    <img src="~/images/clyde.jpg" class="card-img-top" style="height: 300px; object-fit: cover;" alt="Clyde Dextler Fadrillan">
+                    <div class="position-absolute bottom-0 start-0 bg-dark bg-opacity-50 text-white p-2 w-100 text-center">
+                        <h5 class="fw-bold mb-0">Member</h5>
+                        <small>Clyde Dextler Fadrillan</small>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="text-center mt-4">
-    <a href="@Url.Action("Create", "Persons")" class="btn btn-success">Create Person</a>
+    <div class="text-center mt-5">
+        <a href="@Url.Action("Create", "Persons")" class="btn btn-success btn-lg shadow-sm">Start Create</a>
+    </div>
 </div>

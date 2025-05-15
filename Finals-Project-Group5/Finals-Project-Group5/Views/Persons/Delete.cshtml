@@ -1,17 +1,32 @@
 ﻿@model Finals_Project_Group5.Models.Person
+@{
+    ViewData["Title"] = "Delete Person";
+    Layout = "_Layout";
+}
 
-<h2>Delete Person</h2>
-
-
-<div class="alert alert-danger">
-    <h4>Are you sure you want to delete this person?</h4>
-    <p>Name: @Model.Name</p>
-    <p>Age: @Model.Age</p>
-    <p>Id: @Model.Id</p>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow-lg rounded-4 border-0">
+                <div class="card-header bg-gradient-danger text-black text-center rounded-top-4">
+                    <h1 class="fw-bold mb-0 fs-2">@ViewData["Title"]</h1>
+                </div>
+                <div class="card-body p-4">
+                    <div class="alert alert-danger text-center">
+                        <h4 class="mb-3">Are you sure you want to delete this person?</h4>
+                        <p><strong>Name:</strong> @Model.Name</p>
+                        <p><strong>Age:</strong> @Model.Age</p>
+                        <p><strong>Id:</strong> @Model.Id</p>
+                    </div>
+                    <form asp-action="Delete" method="post">
+                        <input type="hidden" asp-for="Id" />
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-danger btn-lg px-4 shadow">Delete</button>
+                            <a asp-action="Index" class="btn btn-outline-secondary btn-lg px-4 shadow">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-<form asp-action="Delete" method="post">
-    <input type="hidden" asp-for="Id" />
-    <button type="submit" class="btn btn-danger">Delete</button>
-    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
-</form>

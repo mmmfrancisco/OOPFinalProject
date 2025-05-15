@@ -1,32 +1,58 @@
-﻿@model IEnumerable<Finals_Project_Group5.Models.Person>  // Ensure this is correct
+﻿@model IEnumerable<Finals_Project_Group5.Models.Person>
+@{
+    ViewData["Title"] = "Person List";
+    Layout = "_Layout";
+}
 
-<h1 class="mb-4">Person List</h1>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-6">
+            <div class="card shadow-lg rounded-4 border-0">
+                <div class="card-header bg-gradient-primary text-black text-center rounded-top-4">
+                    <h1 class="fw-bold mb-0 fs-1">@ViewData["Title"]</h1>
+                </div>
+                <div class="card-body p-5">
+                    <table class="table table-hover align-middle mb-0 fs-5">
+                        <thead class="table-light border-bottom border-3">
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Id</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model?.Any() ?? false)
+                            {
+                                foreach (var person in Model)
+                                {
+                                    <tr>
+                                        <td>@person.Name</td>
+                                        <td>@person.Age</td>
+                                        <td>@person.Id</td>
+                                        <td class="text-center">
+                                            <a asp-action="Edit" asp-route-id="@person.Id" class="btn btn-sm btn-warning me-2 shadow-sm">Edit</a>
+                                            <a asp-action="Delete" asp-route-id="@person.Id" class="btn btn-sm btn-danger shadow-sm">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="4" class="text-center text-muted py-5 fst-italic fs-5">
+                                        No persons found.
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
 
-<div class="card p-4 shadow-sm">
-    <table class="table table-striped table-hover">
-        <thead class="table-primary">
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Id</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var person in Model)
-            {
-                <tr>
-                    <td>@person.Name</td>
-                    <td>@person.Age</td>
-                    <td>@person.Id</td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@person.Id" class="btn btn-warning">Edit</a>
-                        <a asp-action="Delete" asp-route-id="@person.Id" class="btn btn-danger">Delete</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-    <div>
-        <a href="@Url.Action("Create")" class="btn btn-success">Back to Create</a>
+                    <div class="mt-5 d-flex justify-content-center">
+                        <a asp-action="Create" class="btn btn-success btn-lg px-5 fs-5 shadow">Add New Person</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
