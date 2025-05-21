@@ -1,8 +1,11 @@
 ﻿@model Finals_Project_Group5.Models.Person
+
 @{
     ViewData["Title"] = "Create Person";
     Layout = "_Layout";
 }
+
+// Updated Create View - moved Id to hidden input and improved form UX
 
 <div class="container py-5">
     <div class="row justify-content-center">
@@ -13,22 +16,18 @@
                 </div>
                 <div class="card-body p-5">
                     <form asp-action="Create" method="post" novalidate>
+                        <input asp-for="Id" type="hidden" /> <!-- Moved Id to hidden field -->
+
                         <div class="mb-4">
                             <label asp-for="Name" class="form-label fs-5 fw-semibold"></label>
-                            <input asp-for="Name" class="form-control form-control-lg shadow-sm" placeholder="Enter name" />
+                            <input asp-for="Name" class="form-control form-control-lg shadow-sm" placeholder="Enter full name" />
                             <span asp-validation-for="Name" class="text-danger fs-6"></span>
                         </div>
 
                         <div class="mb-4">
                             <label asp-for="Age" class="form-label fs-5 fw-semibold"></label>
-                            <input asp-for="Age" class="form-control form-control-lg shadow-sm" placeholder="Enter age" />
+                            <input asp-for="Age" class="form-control form-control-lg shadow-sm" placeholder="Enter age (e.g., 25)" />
                             <span asp-validation-for="Age" class="text-danger fs-6"></span>
-                        </div>
-
-                        <div class="mb-5">
-                            <label asp-for="Id" class="form-label fs-5 fw-semibold"></label>
-                            <input asp-for="Id" class="form-control form-control-lg shadow-sm" placeholder="Enter id" />
-                            <span asp-validation-for="Id" class="text-danger fs-6"></span>
                         </div>
 
                         <div class="d-flex justify-content-between">
